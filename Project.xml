@@ -57,11 +57,11 @@
 	<haxelib name="flixel" />
 	<haxelib name="flixel-addons" />
 	<haxelib name="flixel-ui" />
-	<haxelib name="discord_rpc" if="cpp"/>
+	<haxelib name="discord_rpc" />
     <haxelib name="tentools" />
-	<haxelib name="linc_luajit" if="cpp"/>
-	<haxelib name="systools" if="cpp"/>
-    <ndll name="systools" haxelib="systools" if="cpp" />
+	<haxelib name="linc_luajit" />
+	<haxelib name="systools" />
+    <ndll name="systools" haxelib="systools" />
 
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
@@ -90,5 +90,8 @@
 	<icon path="assets/compileData/icon256.png" size='256'/>
 	<icon path="assets/compileData/icon512.png" size='512'/>
 	<icon path="assets/compileData/iconOG.png" />
-	
+	<haxedef name="hscriptPos" if="hscript" />
+	<target id="haxe" tool="linker" if="linux">
+		<lib name="/usr/lib64/libX11.so" if="linux"/>
+	</target>
 </project>
