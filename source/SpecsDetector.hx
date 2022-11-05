@@ -31,15 +31,6 @@ class SpecsDetector extends FlxState
 	{
 		var cpu:Bool = Capabilities.supports64BitProcesses; // too lazy for changing this
 		var ram:UInt64 = obtainRAM();
-
-		if (cpu && ram >= 4096)
-			return true;
-		else
-		{
-			return messageBox("INDIE CROSS",
-				"Your PC does not meet the requirements Indie Cross has.\nWhile you can still play the mod, you may experience framedrops and/or lag spikes.\n\nDo you want to play anyway?");
-		}
-
 		return true;
 	}
 
